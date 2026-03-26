@@ -193,3 +193,22 @@ footer {
         height: 120px;
     }
 }
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;   /* circle image */
+    object-fit: cover;
+    border: 3px solid white;
+    margin-top: 20px;
+}
+#hero {
+    text-align: center;
+}
+.profile-pic {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    transition: transform 0.3s;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+}

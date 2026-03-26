@@ -52,45 +52,105 @@ nav a:hover {
     color: #3498db;
 }
 
+/* ==================== HERO SECTION - Professional Look ==================== */
 #hero {
-    background: linear-gradient(to right, #3498db, #2c3e50);
-    color: white;
-    text-align: center;
-    padding: 150px 2rem 100px; /* Extra top padding for fixed header */
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+    padding: 80px 5% 100px;
     position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+/* Profile Image - Clean & Professional */
+.profile-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .profile-img {
-    width: 150px;
-    height: 150px;
+    width: 320px;
+    height: 320px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 1rem;
-    border: 4px solid white;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border: 8px solid #ffffff;
+    transition: all 0.4s ease;
 }
 
-#hero h2 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+.profile-img:hover {
+    transform: scale(1.06) rotate(2deg);
+    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.3);
 }
 
-#hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+/* Text Content */
+.hero-text {
+    flex: 1;
+    min-width: 300px;
 }
 
+.hero-text h1 {
+    font-size: 3.2rem;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    color: #1e2937;
+    font-weight: 700;
+}
+
+.description {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #475569;
+    margin-bottom: 40px;
+}
+
+/* Button */
 .btn {
-    background: white;
-    color: #2c3e50;
-    padding: 0.8rem 1.5rem;
+    padding: 14px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s;
+    display: inline-block;
+    transition: all 0.3s ease;
 }
 
-.btn:hover {
-    background: #ecf0f1;
+.btn-primary {
+    background: #3b82f6;
+    color: white;
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
+}
+
+.btn-primary:hover {
+    background: #2563eb;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px -5px rgba(59, 130, 246, 0.4);
+}
+
+/* Responsive - Mobile Friendly */
+@media (max-width: 768px) {
+    .hero-content {
+        gap: 40px;
+        text-align: center;
+    }
+    .profile-img {
+        width: 260px;
+        height: 260px;
+    }
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
 }
 
 section {
@@ -193,22 +253,33 @@ footer {
         height: 120px;
     }
 }
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;   /* circle image */
-    object-fit: cover;
-    border: 3px solid white;
-    margin-top: 20px;
-}
-#hero {
-    text-align: center;
-}
-.profile-pic {
-    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-    transition: transform 0.3s;
+ /* Professional Profile Image Styles */
+.profile-img {
+    width: 280px;                    /* You can change size */
+    height: 280px;
+    border-radius: 50%;              /* Makes it perfectly circular */
+    object-fit: cover;               /* Keeps the image looking good without stretching */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);   /* Soft professional shadow */
+    border: 6px solid #ffffff;       /* Clean white border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.profile-pic:hover {
-    transform: scale(1.1);
+.profile-img:hover {
+    transform: scale(1.05);          /* Nice subtle zoom on hover */
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: Make the whole hero section look better */
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 100px 5%;
+    min-height: 80vh;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef); /* Light modern background */
+}
+
+#hero .content {
+    max-width: 500px;
 }
